@@ -1,22 +1,21 @@
 package com.example.springsecuritydemo.controller;
 
 import com.example.springsecuritydemo.model.Developer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @RestController
 @RequestMapping("/api/v1/developers")
 public class DeveloperRestControllerV1 {
 
-    private static final List<Developer> DEVELOPERS = List.of(
+    private static final List<Developer> DEVELOPERS = Stream.of(
             new Developer(1L, "Ivan", "Ivanov"),
             new Developer(2L, "Sergey", "Sergeev"),
             new Developer(3L, "Peter", "Petrov")
-    );
+    ).collect(Collectors.toList());
 
     @GetMapping
     public List<Developer> getAll() {
@@ -29,5 +28,16 @@ public class DeveloperRestControllerV1 {
                 .filter(developer -> developer.getId().equals(id))
                 .findFirst()
                 .orElse(null);
+    }
+
+    @PostMapping
+    public Developer create(@RequestBody Developer developer) {
+        DEVELOPERS.add(developer);
+        return developer;
+    }
+
+    @DeleteMapping("/{id}")
+    public void deleteById(@PathVariable Long id) {
+        DEVELOPERS.removeIf(developer -> developer.getId().equals(id));
     }
 }
