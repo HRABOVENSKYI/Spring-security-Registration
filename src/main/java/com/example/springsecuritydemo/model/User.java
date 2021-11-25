@@ -1,10 +1,16 @@
 package com.example.springsecuritydemo.model;
 
-import lombok.Data;
+import com.example.springsecuritydemo.model.enums.Role;
+import com.example.springsecuritydemo.model.enums.Status;
+import lombok.*;
 
 import javax.persistence.*;
 
-@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "users")
 public class User {

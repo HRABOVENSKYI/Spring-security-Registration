@@ -1,4 +1,4 @@
-package com.example.springsecuritydemo.model;
+package com.example.springsecuritydemo.model.enums;
 
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
