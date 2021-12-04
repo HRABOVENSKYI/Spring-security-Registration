@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `registration`.`users`
 
 
 INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`) -- password: admin
-VALUES ('admin@gmial.com', 'Admin', 'Adminov', '$2a$12$laQ4xQ6694QOn/RXgm/HAOOL8u/xPfl5Ja8OkwSVQR9Qx/TcxTTi6', 'ADMIN',
+VALUES ('admin@gmail.com', 'Admin', 'Adminov', '$2a$12$laQ4xQ6694QOn/RXgm/HAOOL8u/xPfl5Ja8OkwSVQR9Qx/TcxTTi6', 'ADMIN',
         'ACTIVE');
 INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`) -- password: user
 VALUES ('user@gmail.com', 'User', 'Userov', '$2a$12$YUK1bPFWo2wZc9VU.efHMe4BGd1.dDq5P80nhprv1GigODFb3uBxi', 'USER',
