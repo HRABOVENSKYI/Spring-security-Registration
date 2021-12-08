@@ -38,14 +38,14 @@ CREATE TABLE IF NOT EXISTS `registration`.`users`
     COLLATE = utf8mb4_0900_ai_ci;
 
 
-INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`) -- password: admin
-VALUES ('admin@gmail.com', 'Admin', 'Adminov', '$2a$12$laQ4xQ6694QOn/RXgm/HAOOL8u/xPfl5Ja8OkwSVQR9Qx/TcxTTi6', 'ADMIN',
+INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`)
+VALUES ('admin@gmail.com', 'Admin', 'Adminov', '$2a$12$LHdyP3GgXuVn40NzhFqh0.E20HK.ICp.85GIpnte6WMdUnNrezBCO', 'ADMIN',
         'ACTIVE');
-INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`) -- password: user
-VALUES ('user@gmail.com', 'User', 'Userov', '$2a$12$YUK1bPFWo2wZc9VU.efHMe4BGd1.dDq5P80nhprv1GigODFb3uBxi', 'USER',
+INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`)
+VALUES ('user@gmail.com', 'User', 'Userov', '$2a$12$LHdyP3GgXuVn40NzhFqh0.E20HK.ICp.85GIpnte6WMdUnNrezBCO', 'USER',
         'BANNED');
-INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`) -- password: user
-VALUES ('u@gmail.com', 'User', 'Userov', '$2a$12$YUK1bPFWo2wZc9VU.efHMe4BGd1.dDq5P80nhprv1GigODFb3uBxi', 'USER',
+INSERT INTO `registration`.`users` (`email`, `first_name`, `last_name`, `password`, `role`, `status`)
+VALUES ('u@gmail.com', 'User', 'Userov', '$2a$12$LHdyP3GgXuVn40NzhFqh0.E20HK.ICp.85GIpnte6WMdUnNrezBCO', 'USER',
         'ACTIVE');
 
 
